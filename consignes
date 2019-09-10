@@ -1,0 +1,8 @@
+Créer un pendu :
+
+Le jeu met un mot random
+Le joueur tape des lettres
+Si bon > les traits du mot disparaissent pour mettre les lettres
+Si faux > le pendu se dessine
+Une mauvaise réponse = 1 traits
+7 chances.

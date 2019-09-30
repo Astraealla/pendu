@@ -1,3 +1,7 @@
+body{
+    background-image: linear-gradient(to right top, #eeb4ee, #f1adf1, #f4a6f3, #f89ef5, #fb96f7);
+}
+
 .align{
     display: flex;
     flex-wrap: wrap;
@@ -13,11 +17,8 @@
     width: 600px;
     color: white;
     margin: 2px;
+    letter-spacing: 10px;
 }
-
-/* .btn{
-    align-content: flex-end;
-} */
 
 .bt{
     margin: 10px;

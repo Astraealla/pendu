@@ -1,5 +1,8 @@
 let canvas = document.getElementById("cnv");
 let ctx = canvas.getContext("2d");
+let screen = document.getElementById("screen"); // getting the screen
+let btn = document.getElementsByClassName("bt"); //getting the letters
+let bt = document.getElementById("newparty"); //getting the new party button
 let tries = 0;
 
 // //words table
@@ -21,8 +24,6 @@ let wordsTab = [
 
 console.log(wordsTab);
 
-let bt = document.getElementById("newparty"); //getting the new party button
-
 //function to start a new party each time we click on the new party button
 function Start(){
 
@@ -30,7 +31,6 @@ function Start(){
 }
 
 bt.addEventListener("click", Start);
-let screen = document.getElementById("screen"); // getting the screen
 let word = wordsTab[Math.floor(Math.random() * wordsTab.length)]; //generating the words randomly
 console.log(word);
 
@@ -41,8 +41,6 @@ console.log(word);
     }
 
 // Chosen letters by the player
-
-let btn = document.getElementsByClassName("bt"); //getting the letters
 
 
 for (let i = 0; i < btn.length; i++)
@@ -183,8 +181,11 @@ function getAnswer(){
             ctx.moveTo(350, 225);
             ctx.lineTo(400, 300); //right leg
             ctx.stroke();
+            alert("Vous avez perdu !");
+            Start();
             break;
         }
+
     }
 
     function displayAlert()

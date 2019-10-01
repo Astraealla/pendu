@@ -2,7 +2,6 @@ let canvas = document.getElementById("cnv");
 let ctx = canvas.getContext("2d");
 let screen = document.getElementById("screen"); // getting the screen
 let btn = document.getElementsByClassName("bt"); //getting the letters
-let bt = document.getElementById("newparty"); //getting the new party button
 let tries = 0;
 
 // //words table
@@ -29,8 +28,6 @@ function Start(){
 
     window.location.reload();
 }
-
-bt.addEventListener("click", Start);
 let word = wordsTab[Math.floor(Math.random() * wordsTab.length)]; //generating the words randomly
 console.log(word);
 

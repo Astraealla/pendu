@@ -57,7 +57,7 @@ function getIndex(letter){
 
     for(i = 0; i < word.length; i++){
         if (letter === word[i]){  //if the letter equal one of the words' indexes in the table
-            indexes.push([i]) // then we "push" the indexes in the indexes variable
+            indexes.push(i) // then we "push" the indexes in the indexes variable
         }
     }
     return indexes; // and we return the indexes variable
@@ -84,7 +84,7 @@ function getAnswer(){
             console.log("You're wrong");
             tries++;
         }
-        //if the letters are wrong, the hangman will start being drew
+        //if the letters are wrong, the hangman will start being drawn
         switch(tries){
             case 1: 
             ctx.beginPath();
@@ -187,117 +187,12 @@ function getAnswer(){
         }
     }
 
+    function displayAlert()
+{
+    let h = document.getElementById("time");
+    let nb = parseInt(h.textContent);
+    nb++;
+    h.textContent = nb;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-// |
-// |
-// |
-// |
-// |
-// |
-// v
-
-// Tout ce qui n'a pas fonctionné
-
-
-
-
-
-
-
-// let word = "MERCI"
-// function displayText()
-// {
-//     let random = generateRandomNumber(words.length); // générer les mots du tableau de façon random
-//     wrd.textContent = words[random]; //afficher les mots random sur l'écran
-// }
-
-// function generateRandomNumber(max)
-// {
-        
-//     return Math.floor(Math.random() * max);
-    
-// }
-
-// bt.addEventListener("click", displayText); //au clic, afficher le mot random sur l'écran
-
-
-// Générer des _ selon la longueur des mots
-
-// let underScore = [];
-// // function createUnderScore(){
-//     for (let i = 0; i < words.length; i++){
-//         // let random = generateRandomNumber(words.length);
-//         // wrd.textContent = words[random];
-//         underScore.push("_");
-//     }
-//     return underScore;
-// }
-
-// console.log(createUnderScore());
-// wrd.textContent = createUnderScore();
-// bt.addEventListener("click", createUnderScore);
-
-// let reponse
-
-// function createUnderScore(){
-//     reponse = "";
-//     for (let i; i < words.length; i++)
-//     {
-//         reponse += "_";
-//     }
-//     document.index.reponse_wrd.value = reponse;
-// }
-
-
-// for( let i =0; i < bt.length; i++)
-// {
-//    
-//     bt[i].addEventListener("click", afficherText);
-//     console.log(afficherText);
-// }
-
-
-// |
-// |
-// v
-//Bien essayé
-// function transformWords()
-// {
-//     wrd.textContent = "_";
-// }
-
-// function displayNewWord()
-// {
-//     let wrd = document.getElementById("screen");
-//     let random = generateRandomNumber(words.length);
-//     wrd.textContent = words[random];
-
-//     console.log(wrd);
-// }
-
-// let bt = document.getElementsByClassName("bt");
-// bt.addEventListener("click", displayNewWord);
+setInterval(displayAlert, 1000);
